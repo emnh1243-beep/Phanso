@@ -164,7 +164,7 @@ const SimplifyModule: React.FC<SimplifyModuleProps> = ({ onBack }) => {
              
              {/* Mũi tên luôn chiếm chỗ để tránh layout shift, chỉ ẩn hiện bằng opacity */}
              <div className={`flex flex-col items-center text-green-500 transition-opacity duration-500 ${result ? 'opacity-100' : 'opacity-0'}`}>
-                <span className="text-xs font-bold text-slate-400 uppercase mb-1">Chia cả 2 cho</span>
+                <span className="text-xs font-bold text-slate-400 uppercase mb-1">Chia tử số và mẫu số cho</span>
                 <div className="bg-green-50 px-5 py-3 rounded-2xl border-b-4 border-green-200 font-black text-2xl shadow-sm">
                   {commonDivisor}
                 </div>

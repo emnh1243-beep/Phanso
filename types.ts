@@ -48,6 +48,7 @@ export interface Achievement {
   totalQuestions: number;
   difficulty: string;
   date: string;
+  history?: HistoryItem[];
 }
 
 export enum TopicId {

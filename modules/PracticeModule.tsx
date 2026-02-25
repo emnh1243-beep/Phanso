@@ -233,7 +233,8 @@ const PracticeModule: React.FC<PracticeModuleProps> = ({ onBack }) => {
             studentClass,
             score: finalScore,
             totalQuestions: questionCountOption,
-            difficulty
+            difficulty,
+            history: history
         });
         setIsSaved(true);
     }

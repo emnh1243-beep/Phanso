@@ -84,5 +84,9 @@ export const getAchievements = (): Achievement[] => {
 };
 
 export const clearAchievements = () => {
-  localStorage.removeItem(STORAGE_KEY);
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([]));
+  } catch (e) {
+    console.error("Failed to clear achievements", e);
+  }
 };

@@ -30,10 +30,10 @@ export default function App() {
       case 'achievements': return <AchievementsModule onBack={() => setView('home')} />;
       default: return (
         <div className="flex flex-col items-center gap-2 animate-fade-in max-w-6xl mx-auto pb-8">
-          <header className="text-center mb-0 relative w-full flex flex-col items-center -mt-4 md:-mt-10">
+          <header className="text-center mb-0 relative w-full flex flex-col items-center -mt-4 md:-mt-8">
             
             {/* Title & Logo Section */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6">
               <div className="animate-float drop-shadow-2xl">
                  <RobikiLogo className="w-28 h-48 md:w-36 md:h-64 object-contain" />
               </div>
@@ -42,14 +42,20 @@ export default function App() {
               </h1>
             </div>
 
-            {/* Author Info - Moved here as single line */}
-            <div className="font-bold text-slate-600 text-base md:text-xl mt-0 bg-white/50 px-6 py-2 rounded-full backdrop-blur-sm border-2 border-white shadow-sm flex flex-col md:flex-row items-center gap-1 md:gap-3 animate-fade-in">
-               <span className="flex items-center gap-2"><User size={18} className="text-blue-500" /> Tác giả: Nguyễn Hoàng Em</span>
-               <span className="hidden md:inline text-slate-300">|</span>
-               <span className="flex items-center gap-2"><Phone size={18} className="text-green-500" /> Điện thoại: 0933 474 843</span>
+            {/* Refactored Author Info */}
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mt-2 bg-white/40 backdrop-blur-sm px-6 py-2 rounded-full border border-white/60 shadow-sm animate-fade-in">
+               <div className="flex items-center gap-2 text-slate-600 font-bold text-sm md:text-lg">
+                 <User size={18} className="text-blue-500" />
+                 <span>Tác giả: <span className="text-slate-800">Nguyễn Hoàng Em</span></span>
+               </div>
+               <div className="hidden md:block w-px h-4 bg-slate-300"></div>
+               <div className="flex items-center gap-2 text-slate-600 font-bold text-sm md:text-lg">
+                 <Phone size={18} className="text-green-500" />
+                 <span>Điện thoại: <span className="text-slate-800">0933 474 843</span></span>
+               </div>
             </div>
 
-            <p className="text-slate-500 text-2xl font-bold mt-1 tracking-wide uppercase">Khám phá thế giới phân số</p>
+            <p className="text-slate-500 text-xl md:text-2xl font-black mt-4 tracking-widest uppercase opacity-80">Khám phá thế giới phân số</p>
           </header>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full max-w-4xl px-4"> 
